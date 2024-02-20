@@ -1,4 +1,4 @@
-name: Snake
+name: Blank Workflow
 
 on:
   push:
@@ -23,13 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate snake
-        run: node generate-snake.js
-
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md
-          git commit -m "Add snake action"
+          git add .
+          git commit -m "Add changes"
           git push
