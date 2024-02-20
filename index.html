@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Animation</title>
+</head>
+<body>
+  <svg id="snake" xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+    <!-- Desenhe os círculos da cobrinha aqui -->
+    <circle id="head" cx="20" cy="20" r="10" fill="red" />
+    <circle id="segment1" cx="10" cy="20" r="10" fill="green" />
+    <circle id="segment2" cx="0" cy="20" r="10" fill="green" />
+  </svg>
+
+  <script>
+    // Adicione o código JavaScript para mover a cobrinha aqui
+    const head = document.getElementById('head');
+    const segment1 = document.getElementById('segment1');
+    const segment2 = document.getElementById('segment2');
+
+    let dx = 10; // Velocidade horizontal da cobrinha
+
+    setInterval(() => {
+      let headX = parseFloat(head.getAttribute('cx'));
+      let segment1X 
